@@ -42,7 +42,7 @@ it, simply add the following line to your Podfile:
 * 各ViewControllerは TransitionViewController を継承するようにします
   * UITabBarController は TransitionTabBarController を継承するようにします
   * 外部既存クラスのため継承できない場合は、「TransitionViewControllerなどを継承できない場合」を見てください
-* 遷移を行うときに `transition.to("/top/list_news!show(id=9)")` などのMethodを使います
+* 遷移を行うときに `transition.to("list_news!show(id=9)")` などのMethodを使います
 * 最初のViewControllerは RootTransitionAgent で指定します。
 
 RootTransitionAgent
