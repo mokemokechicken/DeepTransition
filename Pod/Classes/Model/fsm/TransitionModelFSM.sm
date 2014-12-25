@@ -1,0 +1,49 @@
+%package TransitionModel
+%include    DeepTransitionSample-Swift.h
+%class      TransitionCenter
+%fsmclass   TransitionModelFSM
+
+%start  TransitionModelStateMap::IDLE
+
+%map TransitionModelStateMap
+%%
+
+IDLE
+Entry { onEntryIdle(); }
+{
+  move(vc: AnyObject) IDLE { onMove(vc); }
+  request(destination: AnyObject) CONFIRMING { onRequestConfirming(destination); }
+}
+
+CONFIRMING
+{
+  cancel IDLE {}
+  ok REMOVING {}
+change(params: [String:String]) IDLE { onChangeParams(params); }
+}
+
+REMOVING
+Entry { onEntryRemoving(); }
+{
+  skip_removing ADDING {}
+  finish_remove(vc: AnyObject) [ ctxt.isExpectedReporter(vc) ] ADDING {}
+}
+
+ADDING
+Entry { onEntryAdding(); }
+{
+  move(vc: AnyObject) [ ctxt.isExpectedChild(vc) ] MOVED { onMove(vc); }
+}
+
+MOVED
+Entry { onEntryMoved(); }
+{
+  add ADDING {}
+  finish_transition IDLE {}
+}
+
+Default {
+  stop IDLE {}
+  Default nil {}
+}
+%%

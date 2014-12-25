@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q6p-df-l2G">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="t17-Lv-gkf">
+            <objects>
+                <navigationController id="q6p-df-l2G" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jGz-am-dLV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="so6-KF-Ygr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-728" y="442"/>
+        </scene>
+        <!--TOP-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="top" id="vXZ-lx-hvc" customClass="TopViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI4-7G-WfY">
+                                <rect key="frame" x="164" y="162" width="36" height="30"/>
+                                <state key="normal" title="news">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnNews:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eiK-R1-IG2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhA-yF-wdx">
+                                <rect key="frame" x="144" y="259" width="66" height="30"/>
+                                <state key="normal" title="SubMenu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnCoupon:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u27-vx-0hH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uG5-1O-kLQ">
+                                <rect key="frame" x="157" y="95" width="41" height="30"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnHome:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UZV-3b-PbS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TOP" id="6rJ-Q4-f3Y"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="NsS-47-P9t" kind="show" identifier="news" id="IOC-jB-j6l"/>
+                        <segue destination="CTB-Sg-wH4" kind="presentation" identifier="coupon" id="WWf-jH-QzW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-305.5" y="441.5"/>
+        </scene>
+        <!--Coupon List View Controller-->
+        <scene sceneID="R9Q-YC-G2b">
+            <objects>
+                <viewController storyboardIdentifier="list_coupon" id="CTB-Sg-wH4" customClass="CouponListViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l12-Cm-ndT"/>
+                        <viewControllerLayoutGuide type="bottom" id="rS1-nf-J7Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fXR-te-mtY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d31-F6-GcR">
+                                <rect key="frame" x="111" y="208" width="142" height="30"/>
+                                <state key="normal" title="Push News VC">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnNews2:" destination="CTB-Sg-wH4" eventType="touchUpInside" id="rrx-gw-QxG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXi-Qh-gyj">
+                                <rect key="frame" x="128" y="91" width="118" height="30"/>
+                                <state key="normal" title="Push Coupon VC">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnCoupon2:" destination="CTB-Sg-wH4" eventType="touchUpInside" id="PEz-v3-KF0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gn-Rb-LxN">
+                                <rect key="frame" x="111" y="307" width="142" height="30"/>
+                                <state key="normal" title="UP">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnUp:" destination="CTB-Sg-wH4" eventType="touchUpInside" id="9d8-Vo-9Rw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="bAu-6K-Oz7" kind="show" identifier="detail" id="yOJ-iR-Mwa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQH-cy-rom" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.5" y="787.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="xkk-1u-Mal">
+            <objects>
+                <navigationController id="npO-L9-jqq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="K5a-xr-4la"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QOF-1h-SID">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YMU-OV-fgL" kind="relationship" relationship="rootViewController" id="aIB-Rg-Glg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kyU-3A-mUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.5" y="-675.5"/>
+        </scene>
+        <!--Friend List-->
+        <scene sceneID="UZ3-3w-nwI">
+            <objects>
+                <viewController storyboardIdentifier="friend" title="Friend List" id="YMU-OV-fgL" customClass="FriendListViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f6R-Gn-1rJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wpF-bE-WPD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B1R-Gu-LiI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friend List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEM-bN-Kqw">
+                                <rect key="frame" x="94" y="67" width="187" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3T-eY-iI9">
+                                <rect key="frame" x="144" y="185" width="87" height="30"/>
+                                <state key="normal" title="Show Friend">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnFriend:" destination="YMU-OV-fgL" eventType="touchUpInside" id="aVw-3P-5SK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pME-zN-ED6">
+                                <rect key="frame" x="148" y="281" width="79" height="30"/>
+                                <state key="normal" title="Modal Help">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnHelp:" destination="YMU-OV-fgL" eventType="touchUpInside" id="SZg-NV-SfD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Ryh-jw-cC6"/>
+                    <navigationItem key="navigationItem" id="P4f-Pk-BFU"/>
+                    <connections>
+                        <segue destination="PX1-cV-MLu" kind="show" id="TGB-fM-OEJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D90-Tx-wlC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1291.5" y="-675.5"/>
+        </scene>
+        <!--Friend-->
+        <scene sceneID="66l-AL-RtY">
+            <objects>
+                <viewController storyboardIdentifier="show_friend" title="Friend" id="PX1-cV-MLu" customClass="FriendViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MzB-Xu-2Nk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y2i-49-8an"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vye-sa-tfP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxe-H8-qQf">
+                                <rect key="frame" x="94" y="62" width="187" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAS-hc-vYE">
+                                <rect key="frame" x="127" y="230" width="120" height="30"/>
+                                <state key="normal" title="Show profile/help">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnHelp:" destination="PX1-cV-MLu" eventType="touchUpInside" id="kaA-2z-Fon"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBS-0J-B1p">
+                                <rect key="frame" x="156" y="162" width="63" height="30"/>
+                                <state key="normal" title="friend list">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnFrientList:" destination="PX1-cV-MLu" eventType="touchUpInside" id="q5c-Qo-8MA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kpd-nE-bLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727.5" y="-675.5"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="L6H-iY-B2C">
+            <objects>
+                <viewController storyboardIdentifier="profile" title="Profile" id="fDY-iA-ro4" customClass="ProfileViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgG-aV-vGR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y9x-bE-ejH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p0i-H8-7Ow">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnY-90-k1F">
+                                <rect key="frame" x="16" y="59" width="343" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cg-n9-G7E">
+                                <rect key="frame" x="150" y="198" width="75" height="30"/>
+                                <state key="normal" title="Show Help">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnHelp:" destination="fDY-iA-ro4" eventType="touchUpInside" id="7un-7c-IjI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnX-XB-rLi">
+                                <rect key="frame" x="131" y="291" width="103" height="30"/>
+                                <state key="normal" title="changeParams">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnChangeParams:" destination="fDY-iA-ro4" eventType="touchUpInside" id="hJH-Dp-vMX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="0fp-ZA-2EW"/>
+                    <connections>
+                        <outlet property="label" destination="WnY-90-k1F" id="Byg-Zq-oVC"/>
+                        <segue destination="q0l-NI-Pbh" kind="show" id="HBV-Vn-CYT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Akt-3Z-X0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.5" y="-1413.5"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="sU9-lf-xmI">
+            <objects>
+                <viewController storyboardIdentifier="help" title="Help" id="q0l-NI-Pbh" customClass="HelpViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g14-z5-MtA"/>
+                        <viewControllerLayoutGuide type="bottom" id="PuK-sd-kwB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aK0-jg-aNG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-GZ-eIG">
+                                <rect key="frame" x="94" y="60" width="187" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihj-vi-wnG">
+                                <rect key="frame" x="144" y="206" width="87" height="30"/>
+                                <state key="normal" title="Show Friend">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnFriend:" destination="q0l-NI-Pbh" eventType="touchUpInside" id="bzd-Rb-SgB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxh-zH-LEg">
+                                <rect key="frame" x="170" y="145" width="30" height="30"/>
+                                <state key="normal" title="Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnUp:" destination="q0l-NI-Pbh" eventType="touchUpInside" id="PSH-e1-yja"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbl-Od-NsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286.5" y="-1413.5"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="gi2-BR-6u8">
+            <objects>
+                <tabBarController storyboardIdentifier="home" title="Home" id="OAC-Wr-Fsj" customClass="HomeViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="sGp-H3-ymv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fDY-iA-ro4" kind="relationship" relationship="viewControllers" id="Tia-6g-KIc"/>
+                        <segue destination="npO-L9-jqq" kind="relationship" relationship="viewControllers" id="oiR-RE-QUn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7R7-Vg-BMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="-861"/>
+        </scene>
+        <!--News List View Controller-->
+        <scene sceneID="zja-Ug-mh8">
+            <objects>
+                <viewController storyboardIdentifier="list_news" id="NsS-47-P9t" customClass="NewsListViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OWn-Rw-Wry"/>
+                        <viewControllerLayoutGuide type="bottom" id="Itk-v7-xKT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uG9-QL-MZ0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vc-te-dC5">
+                                <rect key="frame" x="140" y="203" width="86" height="30"/>
+                                <state key="normal" title="Modal News">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnNews2:" destination="NsS-47-P9t" eventType="touchUpInside" id="fCk-1k-NZs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCl-Ue-U07">
+                                <rect key="frame" x="144" y="125" width="78" height="30"/>
+                                <state key="normal" title="Push News">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnNews1:" destination="NsS-47-P9t" eventType="touchUpInside" id="ljQ-Yf-M1C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="Sbi-SS-hMQ" kind="show" identifier="detail" id="hh1-o8-Rd9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kms-v9-4tM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.5" y="39.5"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="ZGT-hN-mRi">
+            <objects>
+                <viewController storyboardIdentifier="show_news" id="Sbi-SS-hMQ" customClass="NewsViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ql1-eG-ch1"/>
+                        <viewControllerLayoutGuide type="bottom" id="VeN-3v-QKy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fEA-DR-hL6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1W-Z5-Ayk">
+                                <rect key="frame" x="166" y="138" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEn-DP-2O6">
+                                <rect key="frame" x="166" y="215" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8p-xb-q6n">
+                                <rect key="frame" x="143" y="319" width="93" height="30"/>
+                                <state key="normal" title="Goto Coupon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnCoupon2:" destination="Sbi-SS-hMQ" eventType="touchUpInside" id="gT4-J4-kWQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="NEn-DP-2O6" id="36N-JC-lzW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3A-IA-d13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.5" y="39.5"/>
+        </scene>
+        <!--Coupon View Controller-->
+        <scene sceneID="iVI-SL-B4p">
+            <objects>
+                <viewController storyboardIdentifier="show_coupon" id="bAu-6K-Oz7" customClass="CouponViewController" customModule="DeepTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qq6-en-EwD"/>
+                        <viewControllerLayoutGuide type="bottom" id="atf-4f-Uhq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="syM-HA-9Nn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coupon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1e-fN-HLS">
+                                <rect key="frame" x="156" y="113" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmW-Ad-ZBy">
+                                <rect key="frame" x="166" y="212" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIe-n4-lYU">
+                                <rect key="frame" x="149" y="288" width="77" height="30"/>
+                                <state key="normal" title="Goto News">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnNews2:" destination="bAu-6K-Oz7" eventType="touchUpInside" id="1yl-WB-1kS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIX-Bx-zwY">
+                                <rect key="frame" x="116" y="348" width="142" height="30"/>
+                                <state key="normal" title="UP">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnUp:" destination="bAu-6K-Oz7" eventType="touchUpInside" id="tbU-2E-n6f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelID" destination="tmW-Ad-ZBy" id="AcT-jh-MrK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="soD-t2-zHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.5" y="787.5"/>
+        </scene>
+    </scenes>
+</document>

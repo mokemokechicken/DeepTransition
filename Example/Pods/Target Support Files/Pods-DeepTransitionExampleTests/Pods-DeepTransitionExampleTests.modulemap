@@ -1,0 +1,6 @@
+framework module Pods_DeepTransitionExampleTests {
+  umbrella header "Pods-DeepTransitionExampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

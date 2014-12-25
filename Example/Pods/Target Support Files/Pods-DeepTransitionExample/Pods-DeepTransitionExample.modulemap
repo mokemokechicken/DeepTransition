@@ -1,0 +1,6 @@
+framework module Pods_DeepTransitionExample {
+  umbrella header "Pods-DeepTransitionExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

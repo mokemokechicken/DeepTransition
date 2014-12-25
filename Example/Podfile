@@ -1,11 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'DeepTransition', :exclusive => true do
-  pod "DeepTransition", :path => "../"
+target 'DeepTransitionExample', :exclusive => true do
+  pod "DeepTransition", :path => ".."
 end
 
-target 'Tests', :exclusive => true do
-  pod "DeepTransition", :path => "../"
+target 'DeepTransitionExampleTests', :exclusive => true do
+  pod "DeepTransition", :path => ".."
 
   pod 'Specta', '~> 0.2.1'
   pod 'Expecta'
